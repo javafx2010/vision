@@ -15,6 +15,10 @@
 		231A2DFD1BE496E00040A8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231A2DFB1BE496E00040A8CE /* LaunchScreen.storyboard */; };
 		231A2E081BE4A00C0040A8CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E071BE4A00C0040A8CE /* GameScene.swift */; };
 		231A2E121BE4ACA70040A8CE /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E111BE4ACA70040A8CE /* Hero.swift */; };
+		231A2E171BE4B4350040A8CE /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E161BE4B4350040A8CE /* Star.swift */; };
+		231A2E1B1BE4CB8A0040A8CE /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E1A1BE4CB8A0040A8CE /* Sprite.swift */; };
+		231A2E1D1BE4D1620040A8CE /* AnimTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E1C1BE4D1620040A8CE /* AnimTarget.swift */; };
+		231A2E1F1BE4D2F10040A8CE /* TouchDelgate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E1E1BE4D2F10040A8CE /* TouchDelgate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		231A2DFE1BE496E00040A8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231A2E071BE4A00C0040A8CE /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = scene/GameScene.swift; sourceTree = "<group>"; };
 		231A2E111BE4ACA70040A8CE /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hero.swift; path = hero/Hero.swift; sourceTree = "<group>"; };
+		231A2E161BE4B4350040A8CE /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Star.swift; path = player/Star.swift; sourceTree = "<group>"; };
+		231A2E1A1BE4CB8A0040A8CE /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sprite.swift; path = player/Sprite.swift; sourceTree = "<group>"; };
+		231A2E1C1BE4D1620040A8CE /* AnimTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimTarget.swift; path = player/AnimTarget.swift; sourceTree = "<group>"; };
+		231A2E1E1BE4D2F10040A8CE /* TouchDelgate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDelgate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		231A2DEF1BE496E00040A8CE /* vision */ = {
 			isa = PBXGroup;
 			children = (
+				231A2E131BE4B4030040A8CE /* player */,
 				231A2E0E1BE4AC450040A8CE /* hero */,
 				231A2E041BE49F950040A8CE /* scene */,
 				231A2DF01BE496E00040A8CE /* AppDelegate.swift */,
@@ -87,6 +96,17 @@
 				231A2E111BE4ACA70040A8CE /* Hero.swift */,
 			);
 			name = hero;
+			sourceTree = "<group>";
+		};
+		231A2E131BE4B4030040A8CE /* player */ = {
+			isa = PBXGroup;
+			children = (
+				231A2E1A1BE4CB8A0040A8CE /* Sprite.swift */,
+				231A2E161BE4B4350040A8CE /* Star.swift */,
+				231A2E1C1BE4D1620040A8CE /* AnimTarget.swift */,
+				231A2E1E1BE4D2F10040A8CE /* TouchDelgate.swift */,
+			);
+			name = player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +185,10 @@
 				231A2E081BE4A00C0040A8CE /* GameScene.swift in Sources */,
 				231A2DF51BE496E00040A8CE /* GameViewController.swift in Sources */,
 				231A2DF11BE496E00040A8CE /* AppDelegate.swift in Sources */,
+				231A2E171BE4B4350040A8CE /* Star.swift in Sources */,
+				231A2E1B1BE4CB8A0040A8CE /* Sprite.swift in Sources */,
+				231A2E1D1BE4D1620040A8CE /* AnimTarget.swift in Sources */,
+				231A2E1F1BE4D2F10040A8CE /* TouchDelgate.swift in Sources */,
 				231A2E121BE4ACA70040A8CE /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,10 +32,14 @@ class GameViewController: UIViewController {
         
         hero=Hero(size:skView.bounds.size)
         
-        scene.apply(hero.getModel())
+        scene.applyTouchDelgate(hero)
+            
+        scene.apply(hero)
             
         // 3. Show the scene.
         skView.presentScene(scene)
+            
+
        
     }
 }
