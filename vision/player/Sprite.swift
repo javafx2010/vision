@@ -6,12 +6,13 @@
 //  Copyright © 2015 JavaFX. All rights reserved.
 //
 
-import UIKit
-import SpriteKit
+import SceneKit
 
 protocol Sprite {
     
     func update(currentTime: NSTimeInterval)
     
-    func getModel()->SKSpriteNode
+   func getModel()->SCNNode
+    
+    
 }

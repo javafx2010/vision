@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 JavaFX. All rights reserved.
 //
 
+
 import UIKit
-import SpriteKit
+import SceneKit
 
 class GameViewController: UIViewController {
 
@@ -22,22 +23,28 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 1. Configure the main view
-        let skView = self.view as! SKView
-        skView.showsFPS = false
-        // 2. Create and configure our game scene
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
         
-        hero=Hero(size:skView.bounds.size)
+        // retrieve the SCNView
+        let scnView = self.view as! SCNView
         
-        scene.applyTouchDelgate(hero)
-            
-        scene.apply(hero)
-            
-        // 3. Show the scene.
-        skView.presentScene(scene)
+        let gameStage=GameScene()
+        
+        // set the scene to the view
+        scnView.scene = gameStage.getModel()
+        
+        
+        let hero=Hero()
+        
+        gameStage.apply(hero)
+        
+        
+        // allows the user to manipulate the camera
+        scnView.allowsCameraControl = true
+        
+        scnView.showsStatistics=false
+        
+        
+        scnView.backgroundColor = UIColor.blackColor()
             
 
        

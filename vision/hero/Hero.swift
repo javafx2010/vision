@@ -7,38 +7,27 @@
 //
 
 
-import SpriteKit
-
+import SceneKit
 
 class Hero : Sprite ,AnimTarget ,TouchDelgate{
     
-    var model:SKSpriteNode?
+    var model:SCNNode?
     
-    var current:CGPoint?
-    
-    var dist:CGPoint?
-    
-    let fegment:CGFloat=10
-    
-    
-    init(size:CGSize){
-        current=CGPoint(x: size.width / 2.0, y: 80.0)
-        model = SKSpriteNode(imageNamed: "hero")
-        model!.position = current!
-        dist=CGPoint(x: size.width / 2.0, y: 80.0)
-        model!.size.width=60
-        model!.size.height=80
+
+    init(){
+      let scene = SCNScene(named: "art.scnassets/hero.scn")!
         
-//        model!.physicsBody = SKPhysicsBody(circleOfRadius: model!.size.width/2)
-//        model!.physicsBody!.dynamic = false
+      model = scene.rootNode.childNodeWithName("hero", recursively: true)!
+        
     }
     
-    func getModel()->SKSpriteNode{
+    
+    func getModel()->SCNNode{
         return self.model!
     }
     
     func target(dist:CGPoint){
-        self.dist=dist
+       
     }
     
     func touchesBegan(point:CGPoint){
@@ -46,12 +35,8 @@ class Hero : Sprite ,AnimTarget ,TouchDelgate{
     }
     
     
+    
     func update(currentTime: NSTimeInterval) {
-        var offsetX=(dist!.x-current!.x)/fegment
-        var offsetY=(dist!.y-current!.y)/fegment
-        current!.x+=offsetX
-        current!.y+=offsetY
-        model!.position = current!
     }
     
 

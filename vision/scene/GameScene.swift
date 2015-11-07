@@ -7,53 +7,52 @@
 //
 
 
-import SpriteKit
+import SceneKit
 
-class GameScene: SKScene {
-    
-    var backgroundNode : SKSpriteNode?
+class GameScene :Stage  {
     
     var items:Array<Sprite>?
     
-    var touchDelgate:TouchDelgate!
+    var scene:SCNScene?
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    init(){
+        items=Array<Sprite>()
         
+        
+        scene = SCNScene(named: "art.scnassets/ship.scn")!
+        
+        // create and add a camera to the scene
+        let cameraNode = SCNNode()
+        cameraNode.camera = SCNCamera()
+        scene!.rootNode.addChildNode(cameraNode)
+        
+        // place the camera
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
+        
+        // create and add a light to the scene
+        let lightNode = SCNNode()
+        lightNode.light = SCNLight()
+        lightNode.light!.type = SCNLightTypeOmni
+        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
+        scene!.rootNode.addChildNode(lightNode)
+        
+        // create and add an ambient light to the scene
+        let ambientLightNode = SCNNode()
+        ambientLightNode.light = SCNLight()
+        ambientLightNode.light!.type = SCNLightTypeAmbient
+        ambientLightNode.light!.color = UIColor.darkGrayColor()
+        scene!.rootNode.addChildNode(ambientLightNode)
+    
     }
     
-    override init(size:CGSize) {
-        super.init(size: size)
-        
-        items=Array<Sprite>()
-            
-        // adding the background
-        backgroundNode = SKSpriteNode(imageNamed: "background")
-        backgroundNode!.anchorPoint = CGPoint(x: 0.5, y: 0.0)
-        backgroundNode!.position = CGPoint(x: size.width / 2.0, y: 0.0)
-        addChild(backgroundNode!)
+    func getModel()->SCNScene{
+        return scene!
     }
     
     func apply(node:Sprite){
-        addChild(node.getModel())
+        scene!.rootNode.addChildNode(node.getModel())
         items?.append(node)
     }
     
-    func applyTouchDelgate(touchDelgate:TouchDelgate){
-        self.touchDelgate=touchDelgate
-    }
     
-    override func touchesBegan(touches:Set<UITouch>, withEvent event: UIEvent?) {
-        let firstPoint=touches.first!.locationInNode(self)
-        let dist:CGPoint=CGPoint(x:firstPoint.x,y:firstPoint.y)
-        touchDelgate!.touchesBegan(dist)
-    }
-    
-    override func update(currentTime: NSTimeInterval) {
-        for var i=0;i<items?.endIndex;i++ {
-            items![i].update(currentTime)
-        }
-    }
-    
-
 }

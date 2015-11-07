@@ -15,10 +15,11 @@
 		231A2DFD1BE496E00040A8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231A2DFB1BE496E00040A8CE /* LaunchScreen.storyboard */; };
 		231A2E081BE4A00C0040A8CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E071BE4A00C0040A8CE /* GameScene.swift */; };
 		231A2E121BE4ACA70040A8CE /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E111BE4ACA70040A8CE /* Hero.swift */; };
-		231A2E171BE4B4350040A8CE /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E161BE4B4350040A8CE /* Star.swift */; };
 		231A2E1B1BE4CB8A0040A8CE /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E1A1BE4CB8A0040A8CE /* Sprite.swift */; };
 		231A2E1D1BE4D1620040A8CE /* AnimTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E1C1BE4D1620040A8CE /* AnimTarget.swift */; };
 		231A2E1F1BE4D2F10040A8CE /* TouchDelgate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A2E1E1BE4D2F10040A8CE /* TouchDelgate.swift */; };
+		23855F5D1BEE1DC60000B683 /* hero.sks in Resources */ = {isa = PBXBuildFile; fileRef = 23855F5C1BEE1DC60000B683 /* hero.sks */; };
+		23855F7F1BEE29EA0000B683 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23855F7E1BEE29EA0000B683 /* Stage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +33,11 @@
 		231A2DFE1BE496E00040A8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231A2E071BE4A00C0040A8CE /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = scene/GameScene.swift; sourceTree = "<group>"; };
 		231A2E111BE4ACA70040A8CE /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hero.swift; path = hero/Hero.swift; sourceTree = "<group>"; };
-		231A2E161BE4B4350040A8CE /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Star.swift; path = player/Star.swift; sourceTree = "<group>"; };
 		231A2E1A1BE4CB8A0040A8CE /* Sprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sprite.swift; path = player/Sprite.swift; sourceTree = "<group>"; };
 		231A2E1C1BE4D1620040A8CE /* AnimTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimTarget.swift; path = player/AnimTarget.swift; sourceTree = "<group>"; };
 		231A2E1E1BE4D2F10040A8CE /* TouchDelgate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDelgate.swift; sourceTree = "<group>"; };
+		23855F5C1BEE1DC60000B683 /* hero.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hero.sks; sourceTree = "<group>"; };
+		23855F7E1BEE29EA0000B683 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				231A2DF41BE496E00040A8CE /* GameViewController.swift */,
 				231A2DF61BE496E00040A8CE /* Main.storyboard */,
 				231A2DF91BE496E00040A8CE /* Assets.xcassets */,
+				23855F5C1BEE1DC60000B683 /* hero.sks */,
 				231A2DFB1BE496E00040A8CE /* LaunchScreen.storyboard */,
 				231A2DFE1BE496E00040A8CE /* Info.plist */,
 			);
@@ -102,9 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				231A2E1A1BE4CB8A0040A8CE /* Sprite.swift */,
-				231A2E161BE4B4350040A8CE /* Star.swift */,
 				231A2E1C1BE4D1620040A8CE /* AnimTarget.swift */,
 				231A2E1E1BE4D2F10040A8CE /* TouchDelgate.swift */,
+				23855F7E1BEE29EA0000B683 /* Stage.swift */,
 			);
 			name = player;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				231A2DF31BE496E00040A8CE /* art.scnassets in Resources */,
 				231A2DFD1BE496E00040A8CE /* LaunchScreen.storyboard in Resources */,
+				23855F5D1BEE1DC60000B683 /* hero.sks in Resources */,
 				231A2DFA1BE496E00040A8CE /* Assets.xcassets in Resources */,
 				231A2DF81BE496E00040A8CE /* Main.storyboard in Resources */,
 			);
@@ -185,7 +189,7 @@
 				231A2E081BE4A00C0040A8CE /* GameScene.swift in Sources */,
 				231A2DF51BE496E00040A8CE /* GameViewController.swift in Sources */,
 				231A2DF11BE496E00040A8CE /* AppDelegate.swift in Sources */,
-				231A2E171BE4B4350040A8CE /* Star.swift in Sources */,
+				23855F7F1BEE29EA0000B683 /* Stage.swift in Sources */,
 				231A2E1B1BE4CB8A0040A8CE /* Sprite.swift in Sources */,
 				231A2E1D1BE4D1620040A8CE /* AnimTarget.swift in Sources */,
 				231A2E1F1BE4D2F10040A8CE /* TouchDelgate.swift in Sources */,
